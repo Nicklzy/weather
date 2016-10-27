@@ -18,5 +18,13 @@
     "request": "^2.76.0",
     "yargs": "^6.3.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicklzy/weather.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nicklzy/weather/issues"
+  },
+  "homepage": "https://github.com/Nicklzy/weather#readme"
 }
