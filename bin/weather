@@ -1,0 +1,50 @@
+#!/usr/bin/env node
+var request = require('request');
+var print = require('../lib/print');
+var argv = require('yargs')
+    .usage('Usage: hello [城市拼音，不填写默认为所在城市]')
+    .example('hello beijing')
+    .help('h')
+    .alias('h', 'help')
+    .epilog('copyright 2016')
+    .argv;
+
+var options = {
+    url: 'http://apis.baidu.com/heweather/weather/free?city='+process.argv[2],
+    headers: {
+        'apikey': '7328474baf90532437b4becdc5f65706'
+    }
+};
+
+
+if(!process.argv[2]){
+    request('http://api.jirengu.com/weather.php',function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            print.printDefault(JSON.parse(body))
+        }
+    })
+}else{
+    request(options, function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            print.print(write(body))
+        }
+    })
+}
+
+
+
+
+
+function write(obj) {
+    var obj = JSON.parse(obj)
+    for(var key in obj){
+        var a = obj[key][0]
+    }
+    return a
+}
+
+
+
+
+
+

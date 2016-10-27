@@ -1,0 +1,22 @@
+{
+  "name": "weatherget",
+  "version": "0.0.2",
+  "description": "命令行获取城市天气",
+  "main": "print.js",
+  "bin": {
+    "weatherget": "./bin/weather"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weather"
+  ],
+  "author": "nicklzy",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.76.0",
+    "yargs": "^6.3.0"
+  },
+  "devDependencies": {}
+}
