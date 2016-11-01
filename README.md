@@ -1,4 +1,8 @@
 #获取城市天气
+##安装
+```
+$ npm install weatherget
+```
 ##用法
 ```
 $ weatherget [城市拼音]
